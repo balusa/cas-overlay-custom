@@ -49,6 +49,8 @@ dependencies {
     compile "org.apereo.cas:cas-server-support-yubikey:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-gauth:${project.'cas.version'}"
     compile "org.apereo.cas:cas-server-support-trusted-mfa:${project.'cas.version'}"
+    compile "mysql:mysql-connector-java:5.1.6"
+
     if (!project.hasProperty('bootiful')) {
         // Other dependencies may be listed here...
     } else {
