@@ -76,9 +76,9 @@ task copyTheme(type: Copy, description: "Copy Themes over to war") {
 }
 war {
     with copySpec { 
-	from "${project.rootDir}/src/main/resources/static/themes/"
+	from "${project.rootDir}/src/main/resources/"
 	include '**/*'
-        into "${buildDir}/cas/build/cas/WEB-INF/classes/static/themes"
+        into "WEB-INF/classes/"
     }
     dependsOn copyConfig
     baseName 'cas'
