@@ -68,7 +68,18 @@ task copyConfig(type: Copy, description: "Copy CAS configuration over to /etc/ca
     }
 }
 
+task copyTheme(type: Copy, description: "Copy Themes over to war") {
+        includeEmptyDirs = true
+        from "${project.rootDir}/src/main/resources/static/themes"
+	include '**/*'
+        into "WEB-INF/classes/static/themes"
+}
 war {
+    with copySpec { 
+	from "${project.rootDir}/src/main/resources/static/themes/"
+	include '**/*'
+        into "${buildDir}/cas/build/cas/WEB-INF/classes/static/themes"
+    }
     dependsOn copyConfig
     baseName 'cas'
     includeWarJars = true
