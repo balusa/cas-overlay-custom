@@ -1,0 +1,9 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "https://*/cas-management/*",
+  "name" : "CAS Management",
+  "id" : 90000009,
+  "theme": "theme1",
+  "description" : "Service Definition for CAS Management app",
+  "evaluationOrder" : 1
+}
